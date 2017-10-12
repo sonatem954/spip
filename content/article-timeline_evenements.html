@@ -1,0 +1,34 @@
+<BOUCLE_articlePrincipale(ARTICLES){id_article}>
+<article class="content h-entry" itemscope itemtype="http://schema.org/Article">
+	<header class="content-header cartouche">
+		[(#LOGO_ARTICLE|image_reduire{200,200})]
+		[<p class="surtitre[ (#EDIT{surtitre})]">(#SURTITRE)</p>]
+		<h1 class="p-name" itemprop="headline">
+            <span [class="(#EDIT{titre})"]>#TITRE</span>
+            [<small class="[(#EDIT{soustitre}) ]soustitre">(#SOUSTITRE)</small>]
+        </h1>
+	</header>
+
+	<div class="content-main" itemprop="articleBody">
+		[<div class="#EDIT{chapo} chapo surlignable p-summary">(#CHAPO|image_reduire{500,0})</div>]
+		[<div class="#EDIT{texte} texte surlignable e-content" itemprop="text">(#TEXTE|image_reduire{500,0})</div>]
+
+		[<p class="#EDIT{hyperlien} hyperlien"><:voir_en_ligne:> : <a href="(#URL_SITE)" class="spip_out">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
+		
+		[<div class="#EDIT{ps} ps surlignable"><h2><:info_ps:></h2>(#PS|image_reduire{500,0})</div>]
+		[<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
+		
+		<INCLURE{fond=noisettes/timeline_article_evenements, id_article} />
+	
+	</div>
+	
+	<footer class="content-footer">
+		[(#REM)<!-- Gestion du portfolio et des documents -->]
+		[(#INCLURE{fond=inclure/documents,id_article})]
+		[(#REM) <!--Forum de l'article
+		NB : pour desactiver les forums de l'article, supprimez simplement la ligne ci-dessous -->]
+		<INCLURE{fond=inclure/forum,id_article,repondre_url=(#PARAMETRES_FORUM|url_reponse_forum),repondre_titre=<:repondre_article:>} />
+	
+	</footer>
+</article>
+</BOUCLE_articlePrincipale>

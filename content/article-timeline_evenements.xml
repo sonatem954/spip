@@ -1,0 +1,5 @@
+<composition>
+	<nom>Article - Timeline des EVENEMENTS</nom>
+	<description>Liste les événements liés à l'article sous-forme de timeline</description>
+	<icon>images/compositions/article-timeline_evenements.svg</icon>
+</composition>

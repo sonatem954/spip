@@ -1,0 +1,27 @@
+<div id="timeline" class="vtimeline">
+<BOUCLE_listEmplois(EVENEMENTS){id_article ?}{par date}{inverse}>
+	<div class="vtimeline-point">
+		<div class="vtimeline-icon"></div>
+		<div class="vtimeline-block">
+			<time class="vtimeline-date">
+				[(#DATE_DEBUT|mois)]/[(#DATE_DEBUT|annee)] &ndash; [(#DATE_FIN|mois)]/[(#DATE_FIN|annee)]
+			</time>
+			<div class="vtimeline-content">
+				<h3 class="[(#EDIT{titre})]">#TITRE</h3>
+				[<small>(#LIEU)</small>]
+				<div class="[(#EDIT{descriptif})]"></div>#DESCRIPTIF
+			</div>			
+		</div>
+	</div>
+</BOUCLE_listEmplois>
+</div>
+<script>/*<![CDATA[*/
+jQuery(function($){
+	$('#timeline').verticalTimeline({
+		startSide: 'left',
+		alternate: true,
+		animate: 'fade',
+		addMarkup: 'false'
+	});
+});
+/*]]>*/</script>
