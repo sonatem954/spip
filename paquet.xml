@@ -1,19 +1,19 @@
 <paquet
 	prefix="vtimeline"
 	categorie="outil"
-	version="1.0.0"
+	version="1.0.1"
 	etat="test"
 	compatibilite="[3.0.0;3.2.*]"
 	logo="prive/theme/spip/images/vtimeline-32.png"
 	documentation="https://github.com/RyanFitzgerald/vertical-timeline"
 >
 	<nom>Vertical Timeline</nom>
-	<auteur lien='http://www.mister-graphx.com'>Arnaud B. (Mist. GraphX)</auteur>
+	<auteur lien='https://www.mister-graphx.com'>Arnaud B. (Mist. GraphX)</auteur>
 
 
 	<licence>GNU/GPL</licence>
 
-	
-	<script source="javascript/vertical-timeline.js" type="public"/>  
-	
+
+	<script source="javascript/vertical-timeline.js" type="public"/>
+
 </paquet>
